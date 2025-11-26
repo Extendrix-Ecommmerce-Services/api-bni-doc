@@ -1,7 +1,7 @@
 # API BNI Guanajuato - Documentación Técnica
 
 **Versión:** 2.2  
-**Fecha:** 24 de Noviembre, 2025  
+**Fecha:** 25 de Noviembre, 2025  
 **Módulo:** extendrix_bni_endpoints v16.0  
 **Compatibilidad:** Odoo 16.0 + cfdi_invoice (BNI)
 
@@ -218,7 +218,7 @@ Body (raw JSON):
 
 ```
 Method: GET
-URL: https://miembros.bnibajio.com/api/bni/facturas?fecha_desde=2025-01-01&fecha_hasta=2025-12-31&estado=vigente&limit=10
+URL: https://miembros.bnibajio.com/api/bni/facturas?fecha_desde=2025-11-20&fecha_hasta=2025-11-20&limit=1
 Headers:
   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
@@ -227,119 +227,128 @@ Headers:
 
 ```json
 {
-  "success": true,
-  "total": 5,
-  "count": 1,
-  "limit": 1,
-  "offset": 0,
-  "has_more": true,
-  "facturas": [
-    {
-      "id": 38,
-      "name": "INV/2025/00005",
-      "folio": "202500005",
-      "uuid": "6fb83423-3804-43d4-89ef-2238ba35bbb4",
-      "serie": "FN",
-      "fecha_emision": "2025-11-20T04:43:54.936881",
-      "fecha_certificacion": "2025-11-19T22:43:57",
-      "rfc_emisor": "BME0603237W7",
-      "nombre_emisor": "REFERENCIAS Y NETWORKING",
-      "regimen_fiscal_emisor": "601",
-      "rfc_receptor": "SVB100527260",
-      "nombre_receptor": "SOCIOS EN VENTAS BAJIO",
-      "codigo_postal_receptor": "38050",
-      "regimen_fiscal_receptor": "601",
-      "residencia_fiscal": "",
-      "num_reg_id_trib": "",
-      "subtotal": 3728.45,
-      "descuento": 0.0,
-      "impuestos": 596.55,
-      "total": 4325.0,
-      "moneda": "MXN",
-      "tipo_cambio": "1",
-      "uso_cfdi": "G03",
-      "uso_cfdi_descripcion": "G03",
-      "metodo_pago": "PUE",
-      "forma_pago": "03",
-      "forma_pago_descripcion": "03",
-      "tipo_comprobante": "I",
-      "lugar_expedicion": "11510",
-      "exportacion": "01",
-      "confirmacion": "",
-      "fac_atr_adquirente": "",
-      "estatus_factura": "vigente",
-      "estado_sat": "factura_correcta",
-      "factura_cfdi": true,
-      "proceso_timbrado": false,
-      "numero_certificado": "00001000000710191149",
-      "numero_certificado_sat": "00001000000719545303",
-      "sello_digital_cfdi": "qa3XgX30pMMd8RU2j+w9Wm2vI5almNT+nLyYYzAeOv+JJQSnf7O4duDoWhDy7JF3SyosazcY5n6KP18UxLgY2ouA8YCOq0fZJkE1zEirxSLsPGUibJ77DaBRC17f8uk+0olDkJ7CDkwHyq5f5bsk7Tpt7/NtdSMbIORJc9OJsFDWrGFiQhmC6Qj1rKS8lQ8gN6yN5tofV4qC/0Mg45uCu4WSL8akEw//RmK508KNdK+btHg9gKJL7mFW5+uuCjxNdKy76GHe1lZAksLE0np2pQGBfaLCU/aso5DvzXANBiA3ry6+gS4RpfSPn4hD3oni33RcdKIrY/U7IV8esra2xQ==",
-      "sello_sat": "I9qQovVORvwvrJ9xq8N63YweWmJQK+8yYjPey9BZtZuTARhtz/ucIteHhUcGQjQZOML0vUAwIhoDw5yNZnK9GPxQjuez46nxKGJ5JwxD9rhpY/L++ipqvhpEDf99HpeLLSM46aZu8G/2alWz0I73le8gdPqZZ8rToJfjr3qhMoymbpi57jcgYEOfyrX8nj2y8eA2+rZtq9CbACGWt9LY6GnJWNgb9H7wcLjFqcibCrxDCJyOiBX/JkgX0KXc4XOVD3etkBYviTmrc2Yi4UUml3UQNSheuFNSQCg6F4lDjJhFbIj22GhmhJ22EvtsJKfW2xXrp90b5q3cL7R8ZWJBnQ==",
-      "cadena_original": "||1.1|6fb83423-3804-43d4-89ef-2238ba35bbb4|2025-11-19T22:43:57|qa3XgX30pMMd8RU2j+w9Wm2vI5almNT+nLyYYzAeOv+JJQSnf7O4duDoWhDy7JF3SyosazcY5n6KP18UxLgY2ouA8YCOq0fZJkE1zEirxSLsPGUibJ77DaBRC17f8uk+0olDkJ7CDkwHyq5f5bsk7Tpt7/NtdSMbIORJc9OJsFDWrGFiQhmC6Qj1rKS8lQ8gN6yN5tofV4qC/0Mg45uCu4WSL8akEw//RmK508KNdK+btHg9gKJL7mFW5+uuCjxNdKy76GHe1lZAksLE0np2pQGBfaLCU/aso5DvzXANBiA3ry6+gS4RpfSPn4hD3oni33RcdKIrY/U7IV8esra2xQ==|00001000000719545303||",
-      "qr_value": "https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?&id=6fb83423-3804-43d4-89ef-2238ba35bbb4&re=BME0603237W7&rr=SVB100527260&tt=0000004325.000000&fe=sra2xQ==",
-      "uuid_relacionado": "",
-      "tipo_relacion": "",
-      "factura_global": false,
-      "fg_periodicidad": "",
-      "fg_meses": "",
-      "fg_ano": "",
-      "fecha_vencimiento": "2025-11-19",
-      "invoice_date": "2025-11-19",
-      "state": "posted",
-      "move_type": "out_invoice",
-      "amount_to_text": "CUATRO MIL TRESCIENTOS VEINTICINCO PESOS 00/100 M. N.",
-      "amount_residual": 0.0,
-      "conceptos": [
+    "success": true,
+    "total": 1,
+    "count": 1,
+    "limit": 1,
+    "offset": 0,
+    "has_more": false,
+    "facturas": [
         {
-          "id": 97,
-          "numero_linea": 0,
-          "clave_sat": "80141902",
-          "clave_unidad": "E48",
-          "unidad_medida": "Unidad de servicio",
-          "no_identificacion": "",
-          "descripcion": "Membresía por 12 meses",
-          "cantidad": 1.0,
-          "precio_unitario": 4325.0,
-          "importe": 3728.45,
-          "descuento": 0.0,
-          "valor_unitario": 4325.0,
-          "objeto_imp": "02",
-          "pedimento": "",
-          "predial": "",
-          "impuestos": {
-            "traslados": [
-              {
-                "nombre": "IVA(16%) VENTAS",
-                "impuesto": "002",
-                "tipo_factor": "Tasa",
-                "base": 3728.45,
-                "tasa_o_cuota": 0.16,
-                "importe": 596.552
-              }
+            "id": 38,
+            "name": "INV/2025/00005",
+            "folio": "202500005",
+            "uuid": "6fb83423-3804-43d4-89ef-2238ba35bbb4",
+            "serie": "FN",
+            "fecha_emision": "2025-11-20T04:43:54.936881",
+            "fecha_certificacion": "2025-11-19T22:43:57",
+            "rfc_emisor": "BME0603237W7",
+            "nombre_emisor": "REFERENCIAS Y NETWORKING",
+            "regimen_fiscal_emisor": "601",
+            "rfc_receptor": "SVB100527260",
+            "nombre_receptor": "SOCIOS EN VENTAS BAJIO",
+            "codigo_postal_receptor": "38050",
+            "regimen_fiscal_receptor": "601",
+            "residencia_fiscal": "",
+            "num_reg_id_trib": "",
+            "subtotal": 3728.45,
+            "descuento": 0.0,
+            "impuestos": 596.55,
+            "total": 4325.0,
+            "moneda": "MXN",
+            "tipo_cambio": "1",
+            "uso_cfdi": "G03",
+            "uso_cfdi_descripcion": "G03",
+            "metodo_pago": "PUE",
+            "forma_pago": "03",
+            "forma_pago_descripcion": "03",
+            "tipo_comprobante": "I",
+            "lugar_expedicion": "11510",
+            "exportacion": "01",
+            "confirmacion": "",
+            "fac_atr_adquirente": "",
+            "estatus_factura": "vigente",
+            "estado_sat": "factura_correcta",
+            "factura_cfdi": true,
+            "proceso_timbrado": false,
+            "numero_certificado": "00001000000710191149",
+            "numero_certificado_sat": "00001000000719545303",
+            "sello_digital_cfdi": "qa3XgX30pMMd8RU2j+w9Wm2vI5almNT+nLyYYzAeOv+JJQSnf7O4duDoWhDy7JF3SyosazcY5n6KP18UxLgY2ouA8YCOq0fZJkE1zEirxSLsPGUibJ77DaBRC17f8uk+0olDkJ7CDkwHyq5f5bsk7Tpt7/NtdSMbIORJc9OJsFDWrGFiQhmC6Qj1rKS8lQ8gN6yN5tofV4qC/0Mg45uCu4WSL8akEw//RmK508KNdK+btHg9gKJL7mFW5+uuCjxNdKy76GHe1lZAksLE0np2pQGBfaLCU/aso5DvzXANBiA3ry6+gS4RpfSPn4hD3oni33RcdKIrY/U7IV8esra2xQ==",
+            "sello_sat": "I9qQovVORvwvrJ9xq8N63YweWmJQK+8yYjPey9BZtZuTARhtz/ucIteHhUcGQjQZOML0vUAwIhoDw5yNZnK9GPxQjuez46nxKGJ5JwxD9rhpY/L++ipqvhpEDf99HpeLLSM46aZu8G/2alWz0I73le8gdPqZZ8rToJfjr3qhMoymbpi57jcgYEOfyrX8nj2y8eA2+rZtq9CbACGWt9LY6GnJWNgb9H7wcLjFqcibCrxDCJyOiBX/JkgX0KXc4XOVD3etkBYviTmrc2Yi4UUml3UQNSheuFNSQCg6F4lDjJhFbIj22GhmhJ22EvtsJKfW2xXrp90b5q3cL7R8ZWJBnQ==",
+            "cadena_original": "||1.1|6fb83423-3804-43d4-89ef-2238ba35bbb4|2025-11-19T22:43:57|qa3XgX30pMMd8RU2j+w9Wm2vI5almNT+nLyYYzAeOv+JJQSnf7O4duDoWhDy7JF3SyosazcY5n6KP18UxLgY2ouA8YCOq0fZJkE1zEirxSLsPGUibJ77DaBRC17f8uk+0olDkJ7CDkwHyq5f5bsk7Tpt7/NtdSMbIORJc9OJsFDWrGFiQhmC6Qj1rKS8lQ8gN6yN5tofV4qC/0Mg45uCu4WSL8akEw//RmK508KNdK+btHg9gKJL7mFW5+uuCjxNdKy76GHe1lZAksLE0np2pQGBfaLCU/aso5DvzXANBiA3ry6+gS4RpfSPn4hD3oni33RcdKIrY/U7IV8esra2xQ==|00001000000719545303||",
+            "qr_value": "https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?&id=6fb83423-3804-43d4-89ef-2238ba35bbb4&re=BME0603237W7&rr=SVB100527260&tt=0000004325.000000&fe=sra2xQ==",
+            "uuid_relacionado": "",
+            "tipo_relacion": "",
+            "factura_global": false,
+            "fg_periodicidad": "",
+            "fg_meses": "",
+            "fg_ano": "",
+            "fecha_vencimiento": "2025-11-19",
+            "invoice_date": "2025-11-19",
+            "state": "posted",
+            "move_type": "out_invoice",
+            "amount_to_text": "CUATRO MIL TRESCIENTOS VEINTICINCO PESOS 00/100 M. N.",
+            "amount_residual": 0.0,
+            "conceptos": [
+                {
+                    "id": 97,
+                    "numero_linea": 0,
+                    "clave_sat": "80141902",
+                    "clave_unidad": "E48",
+                    "unidad_medida": "Unidad de servicio",
+                    "no_identificacion": "",
+                    "descripcion": "Membresía por 12 meses",
+                    "cantidad": 1.0,
+                    "precio_unitario": 4325.0,
+                    "importe": 3728.45,
+                    "descuento": 0.0,
+                    "valor_unitario": 4325.0,
+                    "objeto_imp": "02",
+                    "pedimento": "",
+                    "predial": "",
+                    "impuestos": {
+                        "traslados": [
+                            {
+                                "nombre": "IVA(16%) VENTAS",
+                                "impuesto": "002",
+                                "tipo_factor": "Tasa",
+                                "base": 3728.45,
+                                "tasa_o_cuota": 0.16,
+                                "importe": 596.552
+                            }
+                        ],
+                        "total_traslados": 596.552
+                    }
+                }
             ],
-            "total_traslados": 596.552
-          }
+            "resumen_impuestos": {
+                "translados": [
+                    {
+                        "impuesto": "002",
+                        "TipoFactor": "Tasa",
+                        "tasa": "0.160000",
+                        "importe": 596.55,
+                        "base": 3728.45,
+                        "tax_id": 2
+                    }
+                ],
+                "TotalImpuestosTrasladados": "596.55"
+            },
+            "pagos_relacionados": [
+                {
+                    "diario": "STP",
+                    "fecha": "2025-11-20",
+                    "monto": 4325.0,
+                    "metodo_pago": "STP"
+                }
+            ],
+            "numero_pagos": 1,
+            "xml_base64": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48Y2ZkaTpDb21wcm9iYW50ZSB4bWxuczpjZmRpPSJodHRwOi8vd3d3LnNhdC5nb2IubXgvY2ZkLzQiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5zYXQuZ29iLm14L2NmZC80IGh0dHA6Ly93d3cuc2F0LmdvYi5teC9zaXRpb19pbnRlcm5ldC9jZmQvNC9jZmR2NDAueHNkIiBWZXJzaW9uPSI0LjAiIFNlcmllPSJGTiIgRm9saW89IjIwMjUwMDAwNSIgRmVjaGE9IjIwMjUtMTEtMTlUMjI6NDM6NTQiIEZvcm1hUGFnbz0iMDMiIE5vQ2VydGlmaWNhZG89IjAwMDAxMDAwMDAwNzEwMTkxMTQ5IiBTdWJUb3RhbD0iMzcyOC40NSIgRGVzY3VlbnRvPSIwIiBNb25lZGE9Ik1YTiIgVGlwb0NhbWJpbz0iMSIgVG90YWw9IjQzMjUiIFRpcG9EZUNvbXByb2JhbnRlPSJJIiBFeHBvcnRhY2lvbj0iMDEiIE1ldG9kb1BhZ289IlBVRSIgTHVnYXJFeHBlZGljaW9uPSIxMTUxMCIgQ2VydGlmaWNhZG89Ik1JSUdIekNDQkFlZ0F3SUJBZ0lVTURBd01ERXdNREF3TURBM01UQXhPVEV4TkRrd0RRWUpLb1pJaHZjTkFRRUxCUUF3Z2dHVk1UVXdNd1lEVlFRRERDeEJReUJFUlV3Z1UwVlNWa2xEU1U4Z1JFVWdRVVJOU1U1SlUxUlNRVU5KVDA0Z1ZGSkpRbFZVUVZKSlFURXVNQ3dHQTFVRUNnd2xVMFZTVmtsRFNVOGdSRVVnUVVSTlNVNUpVMVJTUVVOSlQwNGdWRkpKUWxWVVFWSkpRVEVhTUJnR0ExVUVDd3dSVTBGVUxVbEZVeUJCZFhSb2IzSnBkSGt4TWpBd0Jna3Foa2lHOXcwQkNRRVdJM05sY25acFkybHZjMkZzWTI5dWRISnBZblY1Wlc1MFpVQnpZWFF1WjI5aUxtMTRNU1l3SkFZRFZRUUpEQjFCZGk0Z1NHbGtZV3huYnlBM055d2dRMjlzTGlCSGRXVnljbVZ5YnpFT01Bd0dBMVVFRVF3Rk1EWXpNREF4Q3pBSkJnTlZCQVlUQWsxWU1RMHdDd1lEVlFRSURBUkRSRTFZTVJNd0VRWURWUVFIREFwRFZVRlZTRlJGVFU5RE1SVXdFd1lEVlFRdEV3eFRRVlE1TnpBM01ERk9Uak14WERCYUJna3Foa2lHOXcwQkNRSVRUWEpsYzNCdmJuTmhZbXhsT2lCQlJFMUpUa2xUVkZKQlEwbFBUaUJEUlU1VVVrRk1JRVJGSUZORlVsWkpRMGxQVXlCVVVrbENWVlJCVWtsUFV5QkJUQ0JEVDA1VVVrbENWVmxGVGxSRk1CNFhEVEkwTURreE9URTNNekl3TlZvWERUSTRNRGt4T1RFM016SXdOVm93Z2R3eEtqQW9CZ05WQkFNVElWSkZSa1ZTUlU1RFNVRlRJRmtnVGtWVVYwOVNTMGxPUnlCVFFTQkVSU0JEVmpFcU1DZ0dBMVVFS1JNaFVrVkdSVkpGVGtOSlFWTWdXU0JPUlZSWFQxSkxTVTVISUZOQklFUkZJRU5XTVNvd0tBWURWUVFLRXlGU1JVWkZVa1ZPUTBsQlV5QlpJRTVGVkZkUFVrdEpUa2NnVTBFZ1JFVWdRMVl4SlRBakJnTlZCQzBUSEVKTlJUQTJNRE15TXpkWE55QXZJRTFGVUUwNE1UQXhNRGswTkRreEhqQWNCZ05WQkFVVEZTQXZJRTFGVUUwNE1UQXhNRGxOUjFSRVJGSXdOREVQTUEwR0ExVUVDeE1HVFVGVVVrbGFNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXV4a0prU0VOL20zeWJoWEUySm1GMUVTSkV0N0RWVCt0VGJXS2NOcjV2VmtMQXpyT3pIYWhIajRwMUFLQ3dxazZXM0kyN292bWdER2IxUmtjaEYvTzQ5K0lVTGtNNVRkZ3NJRWd4Nk5vYTNJV0pXaTl0ZmtQYVkrSkYzcG5iQXY0akVjRHkvYTJLK2lTMkZaVVZHQ0taMXM3NEtrWEo1YUZnVi9FNnh0QlBaaFMwQ2o3c1ZaRFQ3d0pxc0pVR09qRkoyRkJkS0FmZGNLTy9qNmlJY2g3RVM0cTd1SlpYdXJFY096ZjhyajRGRVRqZWdnc1lXY2ErVEZabG1IUS8wblE5SGZXWWd6MnFwZFM0TUdrbUdHNlNOdHdoUmtPcklsMEVsay9FZzJrYnhWenFUL2Q0TERhaVI3Ry9kcWlSTEliOVR1UXhhQ291UUM5TVVGTmdDNm5YUUlEQVFBQm94MHdHekFNQmdOVkhSTUJBZjhFQWpBQU1Bc0dBMVVkRHdRRUF3SUd3REFOQmdrcWhraUc5dzBCQVFzRkFBT0NBZ0VBWkFmdTZqanNjWERVSW4zWkFveGV5Z2xGVnMwOVZMb1FpSmNob2xKdFVEaWQxdDB2dlpJb1o1UGkxaDUvbEpkNlNaRXJTK2N3R0lLbXpUT2pERUZrcWQ5OTEvdWJBUzh5WWVzOFZsczJlUWZZcG42ZHZUeThldmU2c2ZFR0F2YnIrb3IvY2tFUHREdklKNXhWYVVDRUo3N0hzWmZLbCtEYm9qTElHRlUvUzRsbWM3bW9pbnpmOGFPUXN1ODJhTDAyemFNNDRiK2tkZUpoYU5HdUtBWUVsTkJUa3U0U2JaNkp5OXRBUlN3ekpKMjBqZk1WU2M5VkxyYndnRFhJNUFCTEU1SVNzbGlyYWcyWUVJa1Y3ejNSdVVqWGViUlN5TVltWmN1VXkzVTRRN1NMSkNXWFkvN0tnQ1FpUnV1bU9jSDFnc3lPZEhJSXZLUUpaQkhIWld5Qy9ibmt6aWtZQjZZZ1hzd0hyc3plVlUvdnRteU45eUVGQ2pMZ2dHOXlwbXhDSTRqa3Fldnc2LytMcnpJaDZzUjdxcjhoMmE1Q1JkYlAydm4xQkIvUWVwOW1rZTRxcmw4ZFJpbUdtM24xNEJYTWI4RlVoT0QrQ1lCdHo0Ym1SVFhTQlpVdlgzb1FycC83SjBDa2hpRDlVZ3lKUEk3V2dUTEtDdmd0L0lxUSs3MGpqa2NDdjNTWEVXdDZLZlYwczVRbEpBcUZ5cEpadi8xcXUyQkxNWWJNL05hR092dnRPckxHejdmajhhdUFGdDFoN3dDWFR0a0NtWnExUDBaZVNSTEprVzV4T093UFhqc2p0WWF0MlNxYXhPVzhBcmxOM2tOcTFJOHBMTndiZ1pKd3FnOGRCcE9ma0gwdG84U1hoSWdzQzdhYXJUMVQ0ZzhSakwyRkJiV2tzVWM9IiBTZWxsbz0icWEzWGdYMzBwTU1kOFJVMmordzlXbTJ2STVhbG1OVCtuTHlZWXpBZU92K0pKUVNuZjdPNGR1RG9XaER5N0pGM1N5b3NhemNZNW42S1AxOFV4TGdZMm91QThZQ09xMGZaSmtFMXpFaXJ4U0xzUEdVaWJKNzdEYUJSQzE3Zjh1ayswb2xEa0o3Q0Rrd0h5cTVmNWJzazdUcHQ3L050ZFNNYklPUkpjOU9Kc0ZEV3JHRmlRaG1DNlFqMXJLUzhsUThnTjZ5TjV0b2ZWNHFDLzBNZzQ1dUN1NFdTTDhha0V3Ly9SbUs1MDhLTmRLK2J0SGc5Z0tKTDdtRlc1K3V1Q2p4TmRLeTc2R0hlMWxaQWtzTEUwbnAycFFHQmZhTENVL2FzbzVEdnpYQU5CaUEzcnk2K2dTNFJwZlNQbjRoRDNvbmkzM1JjZEtJclkvVTdJVjhlc3JhMnhRPT0iPjxjZmRpOkVtaXNvciBSZmM9IkJNRTA2MDMyMzdXNyIgTm9tYnJlPSJSRUZFUkVOQ0lBUyBZIE5FVFdPUktJTkciIFJlZ2ltZW5GaXNjYWw9IjYwMSIgLz48Y2ZkaTpSZWNlcHRvciBSZmM9IlNWQjEwMDUyNzI2MCIgTm9tYnJlPSJTT0NJT1MgRU4gVkVOVEFTIEJBSklPIiBVc29DRkRJPSJHMDMiIFJlZ2ltZW5GaXNjYWxSZWNlcHRvcj0iNjAxIiBEb21pY2lsaW9GaXNjYWxSZWNlcHRvcj0iMzgwNTAiIC8+PGNmZGk6Q29uY2VwdG9zPjxjZmRpOkNvbmNlcHRvIENsYXZlUHJvZFNlcnY9IjgwMTQxOTAyIiBDYW50aWRhZD0iMS4wMDAwMDAiIENsYXZlVW5pZGFkPSJFNDgiIFVuaWRhZD0iVW5pZGFkIGRlIHNlcnZpY2lvIiBEZXNjcmlwY2lvbj0iTWVtYnJlc8OtYSBwb3IgMTIgbWVzZXMiIFZhbG9yVW5pdGFyaW89IjM3MjguNDUiIEltcG9ydGU9IjM3MjguNDUiIE9iamV0b0ltcD0iMDIiIERlc2N1ZW50bz0iMC4wMCI+PGNmZGk6SW1wdWVzdG9zPjxjZmRpOlRyYXNsYWRvcz48Y2ZkaTpUcmFzbGFkbyBCYXNlPSIzNzI4LjQ1IiBJbXB1ZXN0bz0iMDAyIiBUaXBvRmFjdG9yPSJUYXNhIiBUYXNhT0N1b3RhPSIwLjE2MDAwMCIgSW1wb3J0ZT0iNTk2LjU1IiAvPjwvY2ZkaTpUcmFzbGFkb3M+PC9jZmRpOkltcHVlc3Rvcz48L2NmZGk6Q29uY2VwdG8+PC9jZmRpOkNvbmNlcHRvcz48Y2ZkaTpJbXB1ZXN0b3MgVG90YWxJbXB1ZXN0b3NUcmFzbGFkYWRvcz0iNTk2LjU1Ij48Y2ZkaTpUcmFzbGFkb3M+PGNmZGk6VHJhc2xhZG8gQmFzZT0iMzcyOC40NSIgSW1wdWVzdG89IjAwMiIgVGlwb0ZhY3Rvcj0iVGFzYSIgVGFzYU9DdW90YT0iMC4xNjAwMDAiIEltcG9ydGU9IjU5Ni41NSIgLz48L2NmZGk6VHJhc2xhZG9zPjwvY2ZkaTpJbXB1ZXN0b3M+PGNmZGk6Q29tcGxlbWVudG8+PHRmZDpUaW1icmVGaXNjYWxEaWdpdGFsIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5zYXQuZ29iLm14L1RpbWJyZUZpc2NhbERpZ2l0YWwgaHR0cDovL3d3dy5zYXQuZ29iLm14L3NpdGlvX2ludGVybmV0L2NmZC9UaW1icmVGaXNjYWxEaWdpdGFsL1RpbWJyZUZpc2NhbERpZ2l0YWx2MTEueHNkIiBWZXJzaW9uPSIxLjEiIFVVSUQ9IjZmYjgzNDIzLTM4MDQtNDNkNC04OWVmLTIyMzhiYTM1YmJiNCIgRmVjaGFUaW1icmFkbz0iMjAyNS0xMS0xOVQyMjo0Mzo1NyIgUmZjUHJvdkNlcnRpZj0iTFNPMTMwNjE4OVI1IiBTZWxsb0NGRD0icWEzWGdYMzBwTU1kOFJVMmordzlXbTJ2STVhbG1OVCtuTHlZWXpBZU92K0pKUVNuZjdPNGR1RG9XaER5N0pGM1N5b3NhemNZNW42S1AxOFV4TGdZMm91QThZQ09xMGZaSmtFMXpFaXJ4U0xzUEdVaWJKNzdEYUJSQzE3Zjh1ayswb2xEa0o3Q0Rrd0h5cTVmNWJzazdUcHQ3L050ZFNNYklPUkpjOU9Kc0ZEV3JHRmlRaG1DNlFqMXJLUzhsUThnTjZ5TjV0b2ZWNHFDLzBNZzQ1dUN1NFdTTDhha0V3Ly9SbUs1MDhLTmRLK2J0SGc5Z0tKTDdtRlc1K3V1Q2p4TmRLeTc2R0hlMWxaQWtzTEUwbnAycFFHQmZhTENVL2FzbzVEdnpYQU5CaUEzcnk2K2dTNFJwZlNQbjRoRDNvbmkzM1JjZEtJclkvVTdJVjhlc3JhMnhRPT0iIE5vQ2VydGlmaWNhZG9TQVQ9IjAwMDAxMDAwMDAwNzE5NTQ1MzAzIiBTZWxsb1NBVD0iSTlxUW92Vk9Sdnd2cko5eHE4TjYzWXdlV21KUUsrOHlZalBleTlCWnRadVRBUmh0ei91Y0l0ZUhoVWNHUWpRWk9NTDB2VUF3SWhvRHc1eU5abks5R1B4UWp1ZXo0Nm54S0dKNUp3eEQ5cmhwWS9MKytpcHF2aHBFRGY5OUhwZUxMU000NmFadThHLzJhbFd6MEk3M2xlOGdkUHFaWjhyVG9KZmpyM3FoTW95bWJwaTU3amNnWUVPZnlyWDhuajJ5OGVBMityWnRxOUNiQUNHV3Q5TFk2R25KV05nYjlIN3djTGpGcWNpYkNyeERDSnlPaUJYL0prZ1gwS1hjNFhPVkQzZXRrQll2aVRtcmMyWWk0VVVtbDNVUU5TaGV1Rk5TUUNnNkY0bERqSmhGYklqMjJHaG1oSjIyRXZ0c0pLZlcyeFhycDkwYjVxM2NMN1I4WldKQm5RPT0iIHhtbG5zOnRmZD0iaHR0cDovL3d3dy5zYXQuZ29iLm14L1RpbWJyZUZpc2NhbERpZ2l0YWwiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIC8+PC9jZmRpOkNvbXBsZW1lbnRvPjwvY2ZkaTpDb21wcm9iYW50ZT4=",
+            "xml_nombre_archivo": "CFDI_INV_2025_00005.xml"
         }
-      ],
-      "resumen_impuestos": {
-        "translados": [
-          {
-            "impuesto": "002",
-            "TipoFactor": "Tasa",
-            "tasa": "0.160000",
-            "importe": 596.55,
-            "base": 3728.45,
-            "tax_id": 2
-          }
-        ],
-        "TotalImpuestosTrasladados": "596.55"
-      },
-      "xml_base64": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48Y2ZkaTpDb21wcm9iYW50ZSB4bWxuczpjZmRpPSJodHRwOi8vd3d3LnNhdC5nb2IubXgvY2ZkLzQiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5zYXQuZ29iLm14L2NmZC80IGh0dHA6Ly93d3cuc2F0LmdvYi5teC9zaXRpb19pbnRlcm5ldC9jZmQvNC9jZmR2NDAueHNkIiBWZXJzaW9uPSI0LjAiIFNlcmllPSJGTiIgRm9saW89IjIwMjUwMDAwNSIgRmVjaGE9IjIwMjUtMTEtMTlUMjI6NDM6NTQiIEZvcm1hUGFnbz0iMDMiIE5vQ2VydGlmaWNhZG89IjAwMDAxMDAwMDAwNzEwMTkxMTQ5IiBTdWJUb3RhbD0iMzcyOC40NSIgRGVzY3VlbnRvPSIwIiBNb25lZGE9Ik1YTiIgVGlwb0NhbWJpbz0iMSIgVG90YWw9IjQzMjUiIFRpcG9EZUNvbXByb2JhbnRlPSJJIiBFeHBvcnRhY2lvbj0iMDEiIE1ldG9kb1BhZ289IlBVRSIgTHVnYXJFeHBlZGljaW9uPSIxMTUxMCIgQ2VydGlmaWNhZG89Ik1JSUdIekNDQkFlZ0F3SUJBZ0lVTURBd01ERXdNREF3TURBM01UQXhPVEV4TkRrd0RRWUpLb1pJaHZjTkFRRUxCUUF3Z2dHVk1UVXdNd1lEVlFRRERDeEJReUJFUlV3Z1UwVlNWa2xEU1U4Z1JFVWdRVVJOU1U1SlUxUlNRVU5KVDA0Z1ZGSkpRbFZVUVZKSlFURXVNQ3dHQTFVRUNnd2xVMFZTVmtsRFNVOGdSRVVnUVVSTlNVNUpVMVJTUVVOSlQwNGdWRkpKUWxWVVFWSkpRVEVhTUJnR0ExVUVDd3dSVTBGVUxVbEZVeUJCZFhSb2IzSnBkSGt4TWpBd0Jna3Foa2lHOXcwQkNRRVdJM05sY25acFkybHZjMkZzWTI5dWRISnBZblY1Wlc1MFpVQnpZWFF1WjI5aUxtMTRNU1l3SkFZRFZRUUpEQjFCZGk0Z1NHbGtZV3huYnlBM055d2dRMjlzTGlCSGRXVnljbVZ5YnpFT01Bd0dBMVVFRVF3Rk1EWXpNREF4Q3pBSkJnTlZCQVlUQWsxWU1RMHdDd1lEVlFRSURBUkRSRTFZTVJNd0VRWURWUVFIREFwRFZVRlZTRlJGVFU5RE1SVXdFd1lEVlFRdEV3eFRRVlE1TnpBM01ERk9Uak14WERCYUJna3Foa2lHOXcwQkNRSVRUWEpsYzNCdmJuTmhZbXhsT2lCQlJFMUpUa2xUVkZKQlEwbFBUaUJEUlU1VVVrRk1JRVJGSUZORlVsWkpRMGxQVXlCVVVrbENWVlJCVWtsUFV5QkJUQ0JEVDA1VVVrbENWVmxGVGxSRk1CNFhEVEkwTURreE9URTNNekl3TlZvWERUSTRNRGt4T1RFM016SXdOVm93Z2R3eEtqQW9CZ05WQkFNVElWSkZSa1ZTUlU1RFNVRlRJRmtnVGtWVVYwOVNTMGxPUnlCVFFTQkVSU0JEVmpFcU1DZ0dBMVVFS1JNaFVrVkdSVkpGVGtOSlFWTWdXU0JPUlZSWFQxSkxTVTVISUZOQklFUkZJRU5XTVNvd0tBWURWUVFLRXlGU1JVWkZVa1ZPUTBsQlV5QlpJRTVGVkZkUFVrdEpUa2NnVTBFZ1JFVWdRMVl4SlRBakJnTlZCQzBUSEVKTlJUQTJNRE15TXpkWE55QXZJRTFGVUUwNE1UQXhNRGswTkRreEhqQWNCZ05WQkFVVEZTQXZJRTFGVUUwNE1UQXhNRGxOUjFSRVJGSXdOREVQTUEwR0ExVUVDeE1HVFVGVVVrbGFNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXV4a0prU0VOL20zeWJoWEUySm1GMUVTSkV0N0RWVCt0VGJXS2NOcjV2VmtMQXpyT3pIYWhIajRwMUFLQ3dxazZXM0kyN292bWdER2IxUmtjaEYvTzQ5K0lVTGtNNVRkZ3NJRWd4Nk5vYTNJV0pXaTl0ZmtQYVkrSkYzcG5iQXY0akVjRHkvYTJLK2lTMkZaVVZHQ0taMXM3NEtrWEo1YUZnVi9FNnh0QlBaaFMwQ2o3c1ZaRFQ3d0pxc0pVR09qRkoyRkJkS0FmZGNLTy9qNmlJY2g3RVM0cTd1SlpYdXJFY096ZjhyajRGRVRqZWdnc1lXY2ErVEZabG1IUS8wblE5SGZXWWd6MnFwZFM0TUdrbUdHNlNOdHdoUmtPcklsMEVsay9FZzJrYnhWenFUL2Q0TERhaVI3Ry9kcWlSTEliOVR1UXhhQ291UUM5TVVGTmdDNm5YUUlEQVFBQm94MHdHekFNQmdOVkhSTUJBZjhFQWpBQU1Bc0dBMVVkRHdRRUF3SUd3REFOQmdrcWhraUc5dzBCQVFzRkFBT0NBZ0VBWkFmdTZqanNjWERVSW4zWkFveGV5Z2xGVnMwOVZMb1FpSmNob2xKdFVEaWQxdDB2dlpJb1o1UGkxaDUvbEpkNlNaRXJTK2N3R0lLbXpUT2pERUZrcWQ5OTEvdWJBUzh5WWVzOFZsczJlUWZZcG42ZHZUeThldmU2c2ZFR0F2YnIrb3IvY2tFUHREdklKNXhWYVVDRUo3N0hzWmZLbCtEYm9qTElHRlUvUzRsbWM3bW9pbnpmOGFPUXN1ODJhTDAyemFNNDRiK2tkZUpoYU5HdUtBWUVsTkJUa3U0U2JaNkp5OXRBUlN3ekpKMjBqZk1WU2M5VkxyYndnRFhJNUFCTEU1SVNzbGlyYWcyWUVJa1Y3ejNSdVVqWGViUlN5TVltWmN1VXkzVTRRN1NMSkNXWFkvN0tnQ1FpUnV1bU9jSDFnc3lPZEhJSXZLUUpaQkhIWld5Qy9ibmt6aWtZQjZZZ1hzd0hyc3plVlUvdnRteU45eUVGQ2pMZ2dHOXlwbXhDSTRqa3Fldnc2LytMcnpJaDZzUjdxcjhoMmE1Q1JkYlAydm4xQkIvUWVwOW1rZTRxcmw4ZFJpbUdtM24xNEJYTWI4RlVoT0QrQ1lCdHo0Ym1SVFhTQlpVdlgzb1FycC83SjBDa2hpRDlVZ3lKUEk3V2dUTEtDdmd0L0lxUSs3MGpqa2NDdjNTWEVXdDZLZlYwczVRbEpBcUZ5cEpadi8xcXUyQkxNWWJNL05hR092dnRPckxHejdmajhhdUFGdDFoN3dDWFR0a0NtWnExUDBaZVNSTEprVzV4T093UFhqc2p0WWF0MlNxYXhPVzhBcmxOM2tOcTFJOHBMTndiZ1pKd3FnOGRCcE9ma0gwdG84U1hoSWdzQzdhYXJUMVQ0ZzhSakwyRkJiV2tzVWM9IiBTZWxsbz0icWEzWGdYMzBwTU1kOFJVMmordzlXbTJ2STVhbG1OVCtuTHlZWXpBZU92K0pKUVNuZjdPNGR1RG9XaER5N0pGM1N5b3NhemNZNW42S1AxOFV4TGdZMm91QThZQ09xMGZaSmtFMXpFaXJ4U0xzUEdVaWJKNzdEYUJSQzE3Zjh1ayswb2xEa0o3Q0Rrd0h5cTVmNWJzazdUcHQ3L050ZFNNYklPUkpjOU9Kc0ZEV3JHRmlRaG1DNlFqMXJLUzhsUThnTjZ5TjV0b2ZWNHFDLzBNZzQ1dUN1NFdTTDhha0V3Ly9SbUs1MDhLTmRLK2J0SGc5Z0tKTDdtRlc1K3V1Q2p4TmRLeTc2R0hlMWxaQWtzTEUwbnAycFFHQmZhTENVL2FzbzVEdnpYQU5CaUEzcnk2K2dTNFJwZlNQbjRoRDNvbmkzM1JjZEtJclkvVTdJVjhlc3JhMnhRPT0iPjxjZmRpOkVtaXNvciBSZmM9IkJNRTA2MDMyMzdXNyIgTm9tYnJlPSJSRUZFUkVOQ0lBUyBZIE5FVFdPUktJTkciIFJlZ2ltZW5GaXNjYWw9IjYwMSIgLz48Y2ZkaTpSZWNlcHRvciBSZmM9IlNWQjEwMDUyNzI2MCIgTm9tYnJlPSJTT0NJT1MgRU4gVkVOVEFTIEJBSklPIiBVc29DRkRJPSJHMDMiIFJlZ2ltZW5GaXNjYWxSZWNlcHRvcj0iNjAxIiBEb21pY2lsaW9GaXNjYWxSZWNlcHRvcj0iMzgwNTAiIC8+PGNmZGk6Q29uY2VwdG9zPjxjZmRpOkNvbmNlcHRvIENsYXZlUHJvZFNlcnY9IjgwMTQxOTAyIiBDYW50aWRhZD0iMS4wMDAwMDAiIENsYXZlVW5pZGFkPSJFNDgiIFVuaWRhZD0iVW5pZGFkIGRlIHNlcnZpY2lvIiBEZXNjcmlwY2lvbj0iTWVtYnJlc8OtYSBwb3IgMTIgbWVzZXMiIFZhbG9yVW5pdGFyaW89IjM3MjguNDUiIEltcG9ydGU9IjM3MjguNDUiIE9iamV0b0ltcD0iMDIiIERlc2N1ZW50bz0iMC4wMCI+PGNmZGk6SW1wdWVzdG9zPjxjZmRpOlRyYXNsYWRvcz48Y2ZkaTpUcmFzbGFkbyBCYXNlPSIzNzI4LjQ1IiBJbXB1ZXN0bz0iMDAyIiBUaXBvRmFjdG9yPSJUYXNhIiBUYXNhT0N1b3RhPSIwLjE2MDAwMCIgSW1wb3J0ZT0iNTk2LjU1IiAvPjwvY2ZkaTpUcmFzbGFkb3M+PC9jZmRpOkltcHVlc3Rvcz48L2NmZGk6Q29uY2VwdG8+PC9jZmRpOkNvbmNlcHRvcz48Y2ZkaTpJbXB1ZXN0b3MgVG90YWxJbXB1ZXN0b3NUcmFzbGFkYWRvcz0iNTk2LjU1Ij48Y2ZkaTpUcmFzbGFkb3M+PGNmZGk6VHJhc2xhZG8gQmFzZT0iMzcyOC40NSIgSW1wdWVzdG89IjAwMiIgVGlwb0ZhY3Rvcj0iVGFzYSIgVGFzYU9DdW90YT0iMC4xNjAwMDAiIEltcG9ydGU9IjU5Ni41NSIgLz48L2NmZGk6VHJhc2xhZG9zPjwvY2ZkaTpJbXB1ZXN0b3M+PGNmZGk6Q29tcGxlbWVudG8+PHRmZDpUaW1icmVGaXNjYWxEaWdpdGFsIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5zYXQuZ29iLm14L1RpbWJyZUZpc2NhbERpZ2l0YWwgaHR0cDovL3d3dy5zYXQuZ29iLm14L3NpdGlvX2ludGVybmV0L2NmZC9UaW1icmVGaXNjYWxEaWdpdGFsL1RpbWJyZUZpc2NhbERpZ2l0YWx2MTEueHNkIiBWZXJzaW9uPSIxLjEiIFVVSUQ9IjZmYjgzNDIzLTM4MDQtNDNkNC04OWVmLTIyMzhiYTM1YmJiNCIgRmVjaGFUaW1icmFkbz0iMjAyNS0xMS0xOVQyMjo0Mzo1NyIgUmZjUHJvdkNlcnRpZj0iTFNPMTMwNjE4OVI1IiBTZWxsb0NGRD0icWEzWGdYMzBwTU1kOFJVMmordzlXbTJ2STVhbG1OVCtuTHlZWXpBZU92K0pKUVNuZjdPNGR1RG9XaER5N0pGM1N5b3NhemNZNW42S1AxOFV4TGdZMm91QThZQ09xMGZaSmtFMXpFaXJ4U0xzUEdVaWJKNzdEYUJSQzE3Zjh1ayswb2xEa0o3Q0Rrd0h5cTVmNWJzazdUcHQ3L050ZFNNYklPUkpjOU9Kc0ZEV3JHRmlRaG1DNlFqMXJLUzhsUThnTjZ5TjV0b2ZWNHFDLzBNZzQ1dUN1NFdTTDhha0V3Ly9SbUs1MDhLTmRLK2J0SGc5Z0tKTDdtRlc1K3V1Q2p4TmRLeTc2R0hlMWxaQWtzTEUwbnAycFFHQmZhTENVL2FzbzVEdnpYQU5CaUEzcnk2K2dTNFJwZlNQbjRoRDNvbmkzM1JjZEtJclkvVTdJVjhlc3JhMnhRPT0iIE5vQ2VydGlmaWNhZG9TQVQ9IjAwMDAxMDAwMDAwNzE5NTQ1MzAzIiBTZWxsb1NBVD0iSTlxUW92Vk9Sdnd2cko5eHE4TjYzWXdlV21KUUsrOHlZalBleTlCWnRadVRBUmh0ei91Y0l0ZUhoVWNHUWpRWk9NTDB2VUF3SWhvRHc1eU5abks5R1B4UWp1ZXo0Nm54S0dKNUp3eEQ5cmhwWS9MKytpcHF2aHBFRGY5OUhwZUxMU000NmFadThHLzJhbFd6MEk3M2xlOGdkUHFaWjhyVG9KZmpyM3FoTW95bWJwaTU3amNnWUVPZnlyWDhuajJ5OGVBMityWnRxOUNiQUNHV3Q5TFk2R25KV05nYjlIN3djTGpGcWNpYkNyeERDSnlPaUJYL0prZ1gwS1hjNFhPVkQzZXRrQll2aVRtcmMyWWk0VVVtbDNVUU5TaGV1Rk5TUUNnNkY0bERqSmhGYklqMjJHaG1oSjIyRXZ0c0pLZlcyeFhycDkwYjVxM2NMN1I4WldKQm5RPT0iIHhtbG5zOnRmZD0iaHR0cDovL3d3dy5zYXQuZ29iLm14L1RpbWJyZUZpc2NhbERpZ2l0YWwiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIC8+PC9jZmRpOkNvbXBsZW1lbnRvPjwvY2ZkaTpDb21wcm9iYW50ZT4=",
-      "xml_nombre_archivo": "CFDI_INV_2025_00005.xml"
-    }
-  ],
-  "response_time": 0.034,
-  "timestamp": "2025-11-24T12:22:12.828464"
+    ],
+    "response_time": 0.068,
+    "timestamp": "2025-11-26T08:44:08.636393"
 }
 ```
 
