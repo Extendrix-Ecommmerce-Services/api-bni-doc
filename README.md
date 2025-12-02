@@ -1,7 +1,7 @@
 # API BNI Guanajuato - Documentación Técnica
 
-**Versión:** 2.2  
-**Fecha:** 25 de Noviembre, 2025  
+**Versión:** 1.0.1  
+**Fecha:** 02 de Diciembre, 2025  
 **Módulo:** extendrix_bni_endpoints v16.0  
 **Compatibilidad:** Odoo 16.0 + cfdi_invoice (BNI)
 
@@ -289,6 +289,15 @@ Headers:
             "move_type": "out_invoice",
             "amount_to_text": "CUATRO MIL TRESCIENTOS VEINTICINCO PESOS 00/100 M. N.",
             "amount_residual": 0.0,
+            "ordenes_venta": [
+                {
+                    "name": "VN00039",
+                    "cliente": {
+                        "nombre": "Raul García Granados Gudiño",
+                        "rf": ""
+                    }
+                }
+            ],
             "conceptos": [
                 {
                     "id": 97,
@@ -347,8 +356,8 @@ Headers:
             "xml_nombre_archivo": "CFDI_INV_2025_00005.xml"
         }
     ],
-    "response_time": 0.068,
-    "timestamp": "2025-11-26T08:44:08.636393"
+    "response_time": 0.787,
+    "timestamp": "2025-12-02T13:40:49.021446"
 }
 ```
 
