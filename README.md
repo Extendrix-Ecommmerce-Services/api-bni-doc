@@ -292,10 +292,7 @@ Headers:
             "ordenes_venta": [
                 {
                     "name": "VN00039",
-                    "cliente": {
-                        "nombre": "Raul García Granados Gudiño",
-                        "rf": ""
-                    }
+                    "cliente": "Raul García Granados Gudiño"
                 }
             ],
             "conceptos": [
@@ -356,8 +353,8 @@ Headers:
             "xml_nombre_archivo": "CFDI_INV_2025_00005.xml"
         }
     ],
-    "response_time": 0.787,
-    "timestamp": "2025-12-02T13:40:49.021446"
+    "response_time": 0.651,
+    "timestamp": "2025-12-02T13:49:21.449898"
 }
 ```
 
